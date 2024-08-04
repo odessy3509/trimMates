@@ -9,71 +9,117 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background-color: #e0f7fa;
+            color: #333;
         }
         header {
-            background: #333;
+            background: #00796b;
             color: #fff;
-            padding: 10px 0;
+            padding: 15px 0;
             text-align: center;
         }
         nav {
             display: flex;
             justify-content: center;
-            background: #444;
+            background: #004d40;
         }
         nav a {
             color: #fff;
-            padding: 15px 20px;
+            padding: 15px 25px;
             text-decoration: none;
             display: block;
         }
         nav a:hover {
-            background: #555;
+            background: #00796b;
         }
         main {
             padding: 20px;
         }
         footer {
-            background: #333;
+            background: #00796b;
             color: #fff;
             text-align: center;
             padding: 10px 0;
-            position: absolute;
+            position: relative;
             width: 100%;
-            bottom: 0;
         }
         .container {
             max-width: 1200px;
             margin: 0 auto;
+        }
+        .hero {
+            background: url('landscaping.jpg') no-repeat center center/cover;
+            color: #fff;
+            padding: 100px 20px;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 3em;
+            margin: 0;
+        }
+        .hero p {
+            font-size: 1.5em;
+        }
+        .services {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .service-item {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            padding: 20px;
+            flex: 1;
+            min-width: calc(33.333% - 20px);
+            text-align: center;
+        }
+        .service-item h3 {
+            margin-top: 0;
         }
     </style>
 </head>
 <body>
     <header>
         <div class="container">
-            <h1>My Website</h1>
+            <h1>Trim Mates</h1>
         </div>
     </header>
     <nav>
         <div class="container">
             <a href="#home">Home</a>
-            <a href="#about">About</a>
+            <a href="#about">About Us</a>
             <a href="#services">Services</a>
             <a href="#contact">Contact</a>
         </div>
     </nav>
     <main>
+        <div class="hero">
+            <h1>Welcome to Trim Mates</h1>
+            <p>Your expert partners in landscaping and garden care</p>
+        </div>
         <div class="container">
-            <h2>Welcome to My Website</h2>
-            <p>This is a simple website template to get you started. You can customize it to suit your needs.</p>
+            <h2>Our Services</h2>
+            <div class="services">
+                <div class="service-item">
+                    <h3>Lawn Care</h3>
+                    <p>Keep your lawn lush and healthy with our professional care services.</p>
+                </div>
+                <div class="service-item">
+                    <h3>Garden Design</h3>
+                    <p>Create beautiful and functional garden spaces tailored to your needs.</p>
+                </div>
+                <div class="service-item">
+                    <h3>Tree Trimming</h3>
+                    <p>Ensure the health and safety of your trees with our expert trimming services.</p>
+                </div>
+            </div>
         </div>
     </main>
     <footer>
         <div class="container">
-            <p>&copy; 2024 My Website. All rights reserved.</p>
+            <p>&copy; 2024 Trim Mates. All rights reserved.</p>
         </div>
     </footer>
 </body>
 </html>
-

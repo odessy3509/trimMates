@@ -1,15 +1,14 @@
 html, body {
     margin: 0;
     padding: 0;
-    overflow-x: hidden; /* Hides horizontal scrollbar */
-    overflow-y: auto; /* Allows vertical scrolling if necessary */
+    overflow: hidden; /* Hide both horizontal and vertical scrollbars */
 }
 
 body {
     font-family: Arial, sans-serif;
     background-color: #f9fbe7;
     color: #2e7d32;
-    min-height: 100vh; /* Ensures body height is at least 100% of viewport height */
+    min-height: 100vh; /* Ensure body covers viewport height */
     box-sizing: border-box;
 }
 

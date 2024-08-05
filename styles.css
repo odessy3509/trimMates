@@ -92,9 +92,11 @@ footer {
 }
 
 .container {
-    max-width: 1200px;
+    max-width: 1200px; /* Adjust as needed */
     margin: 0 auto;
+    padding: 0 20px; /* Adjust padding as needed */
 }
+
 
 .hero {
     background: url('landscaping.jpg') no-repeat center center/cover;
@@ -111,6 +113,11 @@ footer {
 .hero p {
     font-size: 1.5em;
 }
+.hero, .description, .services, .scheduling {
+    padding: 20px;
+    box-sizing: border-box; /* Ensures padding and borders are included in the element's total width and height */
+}
+
 
 .description {
     margin: 40px 0;

@@ -1,0 +1,94 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9fbe7;
+    color: #2e7d32;
+}
+header {
+    background: #004d40;
+    color: #f9fbe7;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+nav {
+    background: #80e2a0;
+    display: flex;
+    justify-content: center;
+}
+nav a {
+    color: #004d40;
+    padding: 15px 25px;
+    text-decoration: none;
+    display: block;
+}
+nav a:hover {
+    background: #004d40;
+    color: #f9fbe7;
+}
+main {
+    padding: 20px;
+}
+footer {
+    background: #004d40;
+    color: #f9fbe7;
+    text-align: center;
+    padding: 20px 0;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.hero {
+    background: url('landscaping.jpg') no-repeat center center/cover;
+    color: #f9fbe7;
+    padding: 100px 20px;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 3em;
+    margin: 0;
+}
+.hero p {
+    font-size: 1.5em;
+}
+.services, .scheduling {
+    margin: 40px 0;
+}
+.services {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.service-item {
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 20px;
+    flex: 1;
+    min-width: calc(33.333% - 20px);
+    text-align: center;
+    border: 2px solid #2e7d32;
+}
+.service-item h3 {
+    margin-top: 0;
+}
+.scheduling {
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 20px;
+    text-align: center;
+    border: 2px solid #2e7d32;
+}
+.scheduling h2 {
+    color: #ff6f00;
+}
+.quick-info {
+    margin: 20px 0;
+}
+.quick-info h2 {
+    color: #ff6f00;
+}

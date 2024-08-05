@@ -8,6 +8,7 @@ body {
     font-family: Arial, sans-serif;
     background-color: #f9fbe7;
     color: #2e7d32;
+    box-sizing: border-box; /* Ensures padding and borders are included in the element's total width and height */
 }
 
 header {
@@ -63,11 +64,15 @@ footer {
     display: flex;
     align-items: center;
     width: 100%;
+    position: relative; /* Ensure positioning of child elements is relative to this container */
 }
 
 .footer-logo {
     width: 120px; /* Adjust the size of the logo */
     height: auto; /* Maintain aspect ratio */
+    position: absolute;
+    top: 20px;
+    left: 20px; /* Ensure logo stays within the viewport */
 }
 
 .quick-info {
@@ -79,16 +84,11 @@ footer {
     margin: 5px 0;
 }
 
-.footer-content .footer-logo {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-}
-
 .container {
-    max-width: 1200px; /* Adjust as needed */
+    max-width: 1200px; /* Ensure this does not exceed the viewport width */
     margin: 0 auto;
     padding: 0 20px; /* Adjust padding as needed */
+    box-sizing: border-box; /* Ensures padding and borders are included in the element's total width and height */
 }
 
 .hero {

@@ -131,6 +131,8 @@ footer {
 
 .service-item h3, .package-item h3 {
     margin-top: 0;
+    text-align: center;
+    margin-left: 10%; /* Center-left alignment */
 }
 
 .booking-button {

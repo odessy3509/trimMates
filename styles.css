@@ -1,13 +1,11 @@
-*,
-*::before,
-*::after {
+* {
     box-sizing: border-box;
 }
 
 html, body {
     margin: 0;
     padding: 0;
-    overflow: hidden; /* Hide both horizontal and vertical scrollbars */
+    overflow: hidden; /* Hides both horizontal and vertical scrollbars */
     height: 100%;
 }
 
@@ -67,23 +65,25 @@ footer {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .footer-content {
     display: flex;
     align-items: center;
     width: 100%;
-    position: relative;
+    justify-content: space-between;
+    text-align: center;
 }
 
 .footer-logo {
-    width: 120px; /* Adjust the size of the logo */
-    height: auto;
+    width: 120px; /* Adjust width as needed */
+    height: auto; /* Maintain aspect ratio */
+    margin: 10px;
 }
 
 .quick-info {
     margin: 0;
-    text-align: left;
 }
 
 .quick-info p {
@@ -106,50 +106,24 @@ footer {
     font-size: 1.5em;
 }
 
-.hero, .description, .services, .scheduling {
-    padding: 20px;
-    box-sizing: border-box;
-}
-
-.description {
+.description, .services, .scheduling, .packages {
     margin: 40px 0;
     padding: 20px;
     text-align: left;
 }
 
-.services {
-    margin: 40px 0;
-    padding: 20px;
-    text-align: left;
-}
-
-.service-item {
+.service-item, .package-item {
     background: #ffffff;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     padding: 20px;
-    flex: 1;
-    min-width: calc(33.333% - 20px);
     text-align: center;
     border: 2px solid #2e7d32;
     margin: 10px;
 }
 
-.service-item h3 {
+.service-item h3, .package-item h3 {
     margin-top: 0;
-}
-
-.scheduling {
-    margin: 40px 0;
-    padding: 20px;
-    color: #2e7d32;
-    text-align: left;
-}
-
-.scheduling h2 {
-    margin: 0;
-    padding: 0;
-    color: #2e7d32;
 }
 
 .booking-button {
@@ -195,9 +169,27 @@ footer {
     font-weight: bold;
 }
 
-.close:hover,
-.close:focus {
+.close:hover, .close:focus {
     color: black;
     text-decoration: none;
     cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-content {
+        flex-direction: column;
+    }
+
+    .footer-logo {
+        width: 80px;
+    }
+
+    .service-item, .package-item {
+        min-width: 100%;
+    }
 }

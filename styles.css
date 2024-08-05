@@ -62,7 +62,7 @@ footer {
 }
 
 .footer-logo {
-    max-height: 80px; /* Adjust height as needed */
+    max-height: 120px; /* Increased height for a larger logo */
     margin-right: 20px;
 }
 
@@ -73,6 +73,7 @@ footer {
 .quick-info p {
     margin: 5px 0;
 }
+
 
 
 

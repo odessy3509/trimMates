@@ -48,20 +48,21 @@ main {
 footer {
     background: #004d40;
     color: #f9fbe7;
-    text-align: left;
     padding: 20px;
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .footer-content {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    width: 100%;
 }
 
 .footer-logo {
-    max-height: 50px;
+    max-height: 80px; /* Adjust height as needed */
     margin-right: 20px;
 }
 
@@ -72,6 +73,7 @@ footer {
 .quick-info p {
     margin: 5px 0;
 }
+
 
 .footer-content .quick-info {
     text-align: left;

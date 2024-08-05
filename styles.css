@@ -62,8 +62,7 @@ footer {
 }
 
 .footer-logo {
-    max-height: 90px; /* Adjust height as needed */
-    max-width: 100%; /* Ensures proportional scaling */
+    max-height: 80px; /* Adjust height as needed */
     margin-right: 20px;
 }
 
@@ -74,8 +73,6 @@ footer {
 .quick-info p {
     margin: 5px 0;
 }
-
-
 
 
 

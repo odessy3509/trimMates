@@ -24,12 +24,14 @@ header {
     color: #f9fbe7;
     padding: 10px 20px;
     text-align: left;
+    position: relative;
 }
 
 .header-content {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap; /* Allows items to wrap on small screens */
 }
 
 header h1 {
@@ -40,6 +42,7 @@ header h1 {
 nav {
     display: flex;
     gap: 15px;
+    flex-wrap: wrap; /* Allows nav items to wrap on small screens */
 }
 
 nav a {
@@ -177,13 +180,25 @@ footer {
 }
 
 @media (max-width: 768px) {
-    .header-content {
+    header h1 {
+        font-size: 2em; /* Scale down header text */
+    }
+
+    nav {
         flex-direction: column;
         align-items: center;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    nav a {
+        font-size: 1em;
+        margin: 5px 0;
     }
 
     .footer-content {
         flex-direction: column;
+        align-items: center;
     }
 
     .footer-logo {
@@ -192,5 +207,28 @@ footer {
 
     .service-item, .package-item {
         min-width: 100%;
+    }
+
+    .hero {
+        padding: 60px 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.5em; /* Further scale down header text for very small screens */
+    }
+
+    nav a {
+        font-size: 0.9em;
+        padding: 8px 10px;
+    }
+
+    .hero h1 {
+        font-size: 2em; /* Adjust hero heading size */
+    }
+
+    .hero p {
+        font-size: 1.2em; /* Adjust hero paragraph size */
     }
 }

@@ -48,8 +48,9 @@ main {
 footer {
     background: #004d40;
     color: #f9fbe7;
-    text-align: center;
-    padding: 20px 0;
+    text-align: left;
+    padding: 20px;
+    position: relative;
 }
 
 .footer-content {
@@ -62,6 +63,24 @@ footer {
 .footer-logo {
     max-height: 50px;
     margin-right: 20px;
+}
+
+.quick-info {
+    margin: 0;
+}
+
+.quick-info p {
+    margin: 5px 0;
+}
+
+.footer-content .quick-info {
+    text-align: left;
+}
+
+.footer-content .footer-logo {
+    position: absolute;
+    top: 20px;
+    right: 20px;
 }
 
 .container {

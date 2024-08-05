@@ -119,6 +119,11 @@ footer {
     text-align: left;
 }
 
+.description h2, .services h2, .scheduling h2, .packages h2 {
+    margin-top: 0;
+    margin-left: 20%; /* Move headers inward */
+}
+
 .service-item, .package-item {
     background: #ffffff;
     border-radius: 8px;
@@ -131,8 +136,6 @@ footer {
 
 .service-item h3, .package-item h3 {
     margin-top: 0;
-    text-align: center;
-    margin-left: 10%; /* Center-left alignment */
 }
 
 .booking-button {

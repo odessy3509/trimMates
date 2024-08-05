@@ -1,3 +1,9 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Hides horizontal scrollbar */
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;

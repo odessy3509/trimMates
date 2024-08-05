@@ -37,9 +37,6 @@ header {
 header h1 {
     font-size: 2.5em;
     margin: 0;
-    flex: 1;
-    text-align: center;
-    margin-left: 10%; /* Center-left alignment */
 }
 
 nav {
@@ -47,7 +44,6 @@ nav {
     gap: 15px;
     flex-wrap: nowrap; /* Prevents wrapping, ensures buttons stay in one row */
     overflow-x: auto; /* Allows horizontal scrolling if necessary */
-    justify-content: center; /* Center the nav items */
 }
 
 nav a {
@@ -83,7 +79,7 @@ footer {
     display: flex;
     align-items: center;
     width: 100%;
-    justify-content: center; /* Center the footer items */
+    justify-content: space-between;
     text-align: center;
 }
 
@@ -111,15 +107,10 @@ footer {
 .hero h1 {
     font-size: 3em;
     margin: 0;
-    flex: 1;
-    text-align: center;
-    margin-left: 10%; /* Center-left alignment */
 }
 
 .hero p {
     font-size: 1.5em;
-    text-align: center;
-    margin-left: 10%; /* Center-left alignment */
 }
 
 .description, .services, .scheduling, .packages {
@@ -140,8 +131,6 @@ footer {
 
 .service-item h3, .package-item h3 {
     margin-top: 0;
-    text-align: center;
-    margin-left: 10%; /* Center-left alignment */
 }
 
 .booking-button {

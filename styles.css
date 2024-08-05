@@ -5,8 +5,8 @@
 html, body {
     margin: 0;
     padding: 0;
-    overflow: hidden; /* Hides both horizontal and vertical scrollbars */
     height: 100%;
+    overflow: hidden; /* Hides scrollbars but allows scrolling */
 }
 
 body {
@@ -16,6 +16,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    overflow: auto; /* Enables scrolling */
 }
 
 header {

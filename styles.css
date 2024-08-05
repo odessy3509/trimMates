@@ -51,6 +51,7 @@ nav a {
     padding: 10px 15px;
     font-size: 1.1em;
     border-radius: 5px;
+    transition: background 0.3s;
 }
 
 nav a:hover {
@@ -180,20 +181,10 @@ footer {
 }
 
 @media (max-width: 768px) {
-    header h1 {
-        font-size: 2em; /* Scale down header text */
-    }
-
-    nav {
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-        margin-top: 10px;
-    }
-
+    /* Adjust navigation buttons */
     nav a {
-        font-size: 1em;
-        margin: 5px 0;
+        font-size: 1em; /* Scale down nav buttons */
+        padding: 8px 12px;
     }
 
     .footer-content {
@@ -215,13 +206,10 @@ footer {
 }
 
 @media (max-width: 480px) {
-    header h1 {
-        font-size: 1.5em; /* Further scale down header text for very small screens */
-    }
-
+    /* Further adjust navigation buttons for very small screens */
     nav a {
         font-size: 0.9em;
-        padding: 8px 10px;
+        padding: 6px 10px;
     }
 
     .hero h1 {

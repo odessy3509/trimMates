@@ -59,12 +59,16 @@ footer {
     display: flex;
     align-items: center;
     width: 100%;
+    justify-content: space-between; /* Adjust if needed */
 }
 
+
 .footer-logo {
-    max-height: 120px; /* Increased height for a larger logo */
+    max-height: 120px; /* Adjust as needed */
+    max-width: 100%; /* Ensures the logo scales proportionally */
     margin-right: 20px;
 }
+
 
 .quick-info {
     margin: 0;

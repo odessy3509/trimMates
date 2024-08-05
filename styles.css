@@ -2,21 +2,21 @@ html, body {
     margin: 0;
     padding: 0;
     overflow-x: hidden; /* Hides horizontal scrollbar */
-    overflow-y: auto; /* Allows vertical scrolling if needed */
+    overflow-y: auto; /* Allows vertical scrolling if necessary */
 }
 
 body {
     font-family: Arial, sans-serif;
     background-color: #f9fbe7;
     color: #2e7d32;
-    box-sizing: border-box;
     min-height: 100vh; /* Ensures body height is at least 100% of viewport height */
+    box-sizing: border-box;
 }
 
 .container {
-    max-width: 1200px;
+    max-width: 1200px; /* Adjust as needed */
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 20px; /* Adjust padding as needed */
     box-sizing: border-box;
 }
 
@@ -63,7 +63,6 @@ footer {
     background: #004d40;
     color: #f9fbe7;
     padding: 20px;
-    position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between;

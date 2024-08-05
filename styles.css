@@ -62,8 +62,8 @@ footer {
 }
 
 .footer-logo {
-    max-height: 80px; /* Reverted to the previous size */
-    margin-right: 20px;
+    width: 100px; /* Set a fixed width for testing */
+    height: auto; /* Maintain aspect ratio */
 }
 
 .quick-info {

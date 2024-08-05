@@ -9,39 +9,40 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #4dcd13;
-            color: #333;
+            background-color: #f9fbe7;
+            color: #2e7d32;
         }
         header {
-            background: #00796b;
-            color: #fff;
-            padding: 15px 0;
-            text-align: center;
+            background: #004d40;
+            color: #f9fbe7;
+            padding: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
         }
         nav {
+            background: #80e2a0;
             display: flex;
             justify-content: center;
-            background: #004d40;
         }
         nav a {
-            color: #fff;
+            color: #004d40;
             padding: 15px 25px;
             text-decoration: none;
             display: block;
         }
         nav a:hover {
-            background: #00796b;
+            background: #004d40;
+            color: #f9fbe7;
         }
         main {
             padding: 20px;
         }
         footer {
-            background: #00796b;
-            color: #fff;
+            background: #004d40;
+            color: #f9fbe7;
             text-align: center;
-            padding: 10px 0;
-            position: relative;
-            width: 100%;
+            padding: 20px 0;
         }
         .container {
             max-width: 1200px;
@@ -49,7 +50,7 @@
         }
         .hero {
             background: url('landscaping.jpg') no-repeat center center/cover;
-            color: #fff;
+            color: #f9fbe7;
             padding: 100px 20px;
             text-align: center;
         }
@@ -60,46 +61,65 @@
         .hero p {
             font-size: 1.5em;
         }
+        .services, .scheduling {
+            margin: 40px 0;
+        }
         .services {
             display: flex;
             flex-wrap: wrap;
             gap: 20px;
         }
         .service-item {
-            background: #fff;
+            background: #ffffff;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
             padding: 20px;
             flex: 1;
             min-width: calc(33.333% - 20px);
             text-align: center;
+            border: 2px solid #2e7d32;
         }
         .service-item h3 {
             margin-top: 0;
+        }
+        .scheduling {
+            background: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            padding: 20px;
+            text-align: center;
+            border: 2px solid #2e7d32;
+        }
+        .scheduling h2 {
+            color: #ff6f00;
+        }
+        .quick-info {
+            margin: 20px 0;
+        }
+        .quick-info h2 {
+            color: #ff6f00;
         }
     </style>
 </head>
 <body>
     <header>
         <div class="container">
-            <h1>Trim Mates</h1>
+            <h1 style="margin: 0;">Trim Mates</h1>
+            <nav>
+                <a href="#home">Home</a>
+                <a href="#about">About Us</a>
+                <a href="#services">Services</a>
+                <a href="#contact">Contact</a>
+            </nav>
         </div>
     </header>
-    <nav>
-        <div class="container">
-            <a href="#home">Home</a>
-            <a href="#about">About Us</a>
-            <a href="#services">Services</a>
-            <a href="#contact">Contact</a>
-        </div>
-    </nav>
     <main>
-        <div class="hero">
+        <div class="hero" id="home">
             <h1>Welcome to Trim Mates</h1>
             <p>Your expert partners in landscaping and garden care</p>
         </div>
         <div class="container">
-            <h2>Our Services</h2>
+            <h2 id="services">Our Services</h2>
             <div class="services">
                 <div class="service-item">
                     <h3>Lawn Care</h3>
@@ -107,18 +127,27 @@
                 </div>
                 <div class="service-item">
                     <h3>Gutter Cleaning</h3>
-                    <p>clean those gutters.</p>
+                    <p>Clean those gutters to prevent water damage.</p>
                 </div>
                 <div class="service-item">
-                    <h3>bush trimming</h3>
-                    <p>Ensure the health and safety of your trees with our expert trimming services.</p>
+                    <h3>Bush Trimming</h3>
+                    <p>Ensure the health and safety of your bushes with our expert trimming services.</p>
                 </div>
+            </div>
+            <div class="scheduling">
+                <h2>Schedule a Service</h2>
+                <p>Contact us to book an appointment for our services at your convenience.</p>
+                <!-- Add scheduling form or contact information here -->
             </div>
         </div>
     </main>
     <footer>
         <div class="container">
             <p>&copy; 2024 Trim Mates. All rights reserved.</p>
+            <div class="quick-info">
+                <p>Contact us: (123) 456-7890 | info@trimmates.com</p>
+                <p>Address: 123 Landscaping Ave, Gardenville, ST 12345</p>
+            </div>
         </div>
     </footer>
 </body>

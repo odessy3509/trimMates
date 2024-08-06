@@ -115,7 +115,7 @@ main {
 .modal {
     display: none;
     position: fixed;
-    z-index: 1;
+    z-index: 1000; /* Ensure it's above other content */
     left: 0;
     top: 0;
     width: 100%;

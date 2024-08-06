@@ -113,14 +113,14 @@ footer {
     font-size: 1.5em;
 }
 
-/* Existing styles ... */
-
+/* General Section Styles */
 .description, .services, .scheduling, .packages {
     margin: 40px 0;
     padding: 20px;
     text-align: left;
 }
 
+/* Heading Styles */
 .description h2, .services h2, .scheduling h2, .packages h2 {
     font-size: 2em;
     margin-top: 0;
@@ -128,6 +128,7 @@ footer {
     color: #004d40;
 }
 
+/* Consistent styling for section items */
 .service-item, .package-item {
     background: #ffffff;
     border-radius: 8px;
@@ -142,8 +143,20 @@ footer {
     margin-top: 0;
 }
 
-/* Ensure other styles are consistent ... */
+/* Ensure consistency for About section */
+.description p {
+    line-height: 1.6; /* Improve readability */
+    margin: 0; /* Remove default margins if necessary */
+}
 
+/* Scheduling Section Styles */
+.scheduling h2 {
+    color: #004d40; /* Consistent color */
+}
+
+.scheduling p {
+    margin: 20px 0; /* Add margin for spacing */
+}
 
 .booking-button {
     display: inline-block;

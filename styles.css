@@ -16,17 +16,14 @@ header {
     left: 0;
     width: 100%;
     z-index: 1000;
-}
-
-.header-content {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-header h1 {
-    font-size: 2.5em;
+.header-content h1 {
     margin: 0;
+    font-size: 2.5em;
 }
 
 nav {
@@ -49,7 +46,70 @@ nav a:hover {
 
 main {
     padding: 80px 20px 20px;
-    flex: 1;
+}
+
+section {
+    margin: 40px 0;
+}
+
+.hero {
+    background: url('landscaping.jpg') no-repeat center center/cover;
+    color: #f9fbe7;
+    padding: 100px 20px;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 3em;
+    margin: 0;
+}
+
+.hero p {
+    font-size: 1.5em;
+}
+
+.description {
+    text-align: left;
+}
+
+.services-container, .packages-container {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding: 10px 0;
+    gap: 10px;
+    width: 100%;
+}
+
+.service-item, .package-item {
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 20px;
+    text-align: center;
+    border: 2px solid #2e7d32;
+    flex: 0 0 auto;
+    min-width: 200px;
+}
+
+.service-item h3, .package-item h3 {
+    margin-top: 0;
+}
+
+.booking-button {
+    display: inline-block;
+    background: #2e7d32;
+    color: #ffffff;
+    padding: 15px 25px;
+    font-size: 1.2em;
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.booking-button:hover {
+    background: #004d40;
 }
 
 footer {
@@ -58,9 +118,7 @@ footer {
     padding: 20px;
     display: flex;
     justify-content: space-between;
-    position: fixed;
-    bottom: 0;
-    left: 0;
+    position: relative;
     width: 100%;
     box-sizing: border-box;
 }
@@ -85,70 +143,6 @@ footer {
     margin: 5px 0;
 }
 
-.hero {
-    background: url('landscaping.jpg') no-repeat center center/cover;
-    color: #f9fbe7;
-    padding: 100px 20px;
-    text-align: center;
-}
-
-.hero h1 {
-    font-size: 3em;
-    margin: 0;
-}
-
-.hero p {
-    font-size: 1.5em;
-}
-
-.description, .services-container, .packages-container, .scheduling {
-    margin: 40px 0;
-    padding: 20px;
-}
-
-.description {
-    text-align: left;
-}
-
-.services-container, .packages-container {
-    display: flex;
-    overflow-x: auto;
-    width: 100%;
-    padding: 10px 0;
-    gap: 10px;
-}
-
-.service-item, .package-item {
-    background: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    padding: 20px;
-    text-align: center;
-    border: 2px solid #2e7d32;
-    flex: 0 0 auto;
-}
-
-.service-item h3, .package-item h3 {
-    margin-top: 0;
-}
-
-.booking-button {
-    display: inline-block;
-    background: #2e7d32;
-    color: #ffffff;
-    padding: 15px 25px;
-    font-size: 1.2em;
-    text-decoration: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background 0.3s;
-}
-
-.booking-button:hover {
-    background: #004d40;
-}
-
-/* Modal styles */
 .modal {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */

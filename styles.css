@@ -65,23 +65,19 @@ main {
     flex: 1;
 }
 
+/* Footer Styles */
 footer {
     background: #004d40;
     color: #f9fbe7;
     padding: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    text-align: center;
 }
 
-/* Footer Styles */
 .footer-content {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    text-align: center;
+    justify-content: center;
+    flex-direction: column;
 }
 
 .contact-button {
@@ -100,6 +96,7 @@ footer {
 .contact-button:hover {
     background: #004d40;
 }
+
 
 
 .footer-logo {

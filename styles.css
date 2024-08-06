@@ -5,12 +5,13 @@ html, body {
     height: 100%;
     box-sizing: border-box;
     font-family: Arial, sans-serif; /* Ensure consistent font across devices */
+    color: #2e7d32; /* Text color */
 }
 
 /* Header Styles */
 header {
-    background: #004d40;
-    color: #f9fbe7;
+    background: #004d40; /* Header background color */
+    color: #f9fbe7; /* Header text color */
     padding: 10px 20px;
     text-align: left;
     position: -webkit-sticky; /* For Safari */
@@ -38,10 +39,10 @@ nav {
 }
 
 nav a {
-    color: #f9fbe7;
+    color: #f9fbe7; /* Nav text color */
     text-decoration: none;
     padding: 10px 15px;
-    font-size: 1em; /* Use relative units for better scaling */
+    font-size: 1rem; /* Use relative units for better scaling */
     border-radius: 5px;
     transition: background 0.3s;
     white-space: nowrap; /* Prevents text from wrapping */
@@ -59,18 +60,18 @@ main {
 /* Hero Section Styles */
 .hero {
     background: url('landscaping.jpg') no-repeat center center/cover;
-    color: #f9fbe7;
+    color: #f9fbe7; /* Hero text color */
     padding: 80px 20px; /* Adjusted padding for better responsiveness */
     text-align: center;
 }
 
 .hero h1 {
-    font-size: 2.5em; /* Adjust font size for responsiveness */
+    font-size: 2.5rem; /* Adjust font size for responsiveness */
     margin: 0;
 }
 
 .hero p {
-    font-size: 1.2em; /* Adjust font size for responsiveness */
+    font-size: 1.2rem; /* Adjust font size for responsiveness */
 }
 
 /* Section Styles */
@@ -82,12 +83,12 @@ main {
 
 /* Service and Package Item Styles */
 .service-item, .package-item {
-    background: #ffffff;
+    background: #ffffff; /* Item background color */
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     padding: 20px;
     text-align: center;
-    border: 2px solid #2e7d32;
+    border: 2px solid #2e7d32; /* Border color */
     margin: 10px;
 }
 
@@ -98,10 +99,10 @@ main {
 /* Booking Button Styles */
 .booking-button {
     display: inline-block;
-    background: #2e7d32;
-    color: #ffffff;
+    background: #2e7d32; /* Button background color */
+    color: #ffffff; /* Button text color */
     padding: 15px 25px;
-    font-size: 1.1em; /* Use relative units for better scaling */
+    font-size: 1.1rem; /* Use relative units for better scaling */
     text-decoration: none;
     border-radius: 5px;
     cursor: pointer;
@@ -148,8 +149,8 @@ main {
 
 /* Footer Styles */
 footer {
-    background: #004d40;
-    color: #f9fbe7;
+    background: #004d40; /* Footer background color */
+    color: #f9fbe7; /* Footer text color */
     padding: 20px;
     display: flex;
     align-items: center;
@@ -186,7 +187,7 @@ footer {
     }
 
     nav a {
-        font-size: 0.9em; /* Scale down nav buttons */
+        font-size: 0.9rem; /* Scale down nav buttons */
         padding: 8px 12px;
     }
 
@@ -210,15 +211,15 @@ footer {
 
 @media (max-width: 480px) {
     nav a {
-        font-size: 0.8em;
+        font-size: 0.8rem;
         padding: 6px 10px;
     }
 
     .hero h1 {
-        font-size: 2em; /* Adjust hero heading size */
+        font-size: 2rem; /* Adjust hero heading size */
     }
 
     .hero p {
-        font-size: 1em; /* Adjust hero paragraph size */
+        font-size: 1rem; /* Adjust hero paragraph size */
     }
 }

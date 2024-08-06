@@ -1,17 +1,26 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const links = document.querySelectorAll('nav a');
+document.addEventListener('DOMContentLoaded', () => {
+    const modal = document.getElementById('bookingModal');
+    const openModalButton = document.getElementById('openModal');
+    const closeModalButton = document.getElementById('closeModal');
 
-    links.forEach(link => {
-        link.addEventListener('click', function(e) {
-            e.preventDefault();
+    openModalButton.addEventListener('click', () => {
+        modal.style.display = 'block';
+    });
 
-            const targetId = this.getAttribute('href').substring(1);
-            const targetElement = document.getElementById(targetId);
+    closeModalButton.addEventListener('click', () => {
+        modal.style.display = 'none';
+    });
 
-            window.scrollTo({
-                top: targetElement.offsetTop,
-                behavior: 'smooth'
-            });
-        });
+    window.addEventListener('click', (event) => {
+        if (event.target === modal) {
+            modal.style.display = 'none';
+        }
+    });
+
+    document.getElementById('bookingForm').addEventListener('submit', (event) => {
+        event.preventDefault();
+        alert('Your booking request has been submitted!');
+        modal.style.display = 'none';
+        document.getElementById('bookingForm').reset();
     });
 });

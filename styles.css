@@ -4,6 +4,7 @@ html, body {
     padding: 0;
     height: 100%;
     box-sizing: border-box;
+    font-family: Arial, sans-serif; /* Ensure consistent font across devices */
 }
 
 /* Header Styles */
@@ -40,7 +41,7 @@ nav a {
     color: #f9fbe7;
     text-decoration: none;
     padding: 10px 15px;
-    font-size: 1.1em;
+    font-size: 1em; /* Use relative units for better scaling */
     border-radius: 5px;
     transition: background 0.3s;
     white-space: nowrap; /* Prevents text from wrapping */
@@ -59,17 +60,17 @@ main {
 .hero {
     background: url('landscaping.jpg') no-repeat center center/cover;
     color: #f9fbe7;
-    padding: 100px 20px;
+    padding: 80px 20px; /* Adjusted padding for better responsiveness */
     text-align: center;
 }
 
 .hero h1 {
-    font-size: 3em;
+    font-size: 2.5em; /* Adjust font size for responsiveness */
     margin: 0;
 }
 
 .hero p {
-    font-size: 1.5em;
+    font-size: 1.2em; /* Adjust font size for responsiveness */
 }
 
 /* Section Styles */
@@ -100,7 +101,7 @@ main {
     background: #2e7d32;
     color: #ffffff;
     padding: 15px 25px;
-    font-size: 1.2em;
+    font-size: 1.1em; /* Use relative units for better scaling */
     text-decoration: none;
     border-radius: 5px;
     cursor: pointer;
@@ -185,7 +186,7 @@ footer {
     }
 
     nav a {
-        font-size: 1em; /* Scale down nav buttons */
+        font-size: 0.9em; /* Scale down nav buttons */
         padding: 8px 12px;
     }
 
@@ -209,7 +210,7 @@ footer {
 
 @media (max-width: 480px) {
     nav a {
-        font-size: 0.9em;
+        font-size: 0.8em;
         padding: 6px 10px;
     }
 
@@ -218,6 +219,6 @@ footer {
     }
 
     .hero p {
-        font-size: 1.2em; /* Adjust hero paragraph size */
+        font-size: 1em; /* Adjust hero paragraph size */
     }
 }

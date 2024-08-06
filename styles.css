@@ -6,7 +6,7 @@ html, body {
     margin: 0;
     padding: 0;
     height: 100%;
-    overflow-x: hidden; /* Prevent horizontal scrolling */
+    overflow-x: hidden; /* Prevents horizontal scrolling */
 }
 
 body {
@@ -16,6 +16,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    overflow-y: hidden; /* Prevents vertical scrolling */
 }
 
 header {
@@ -24,21 +25,20 @@ header {
     padding: 10px 20px;
     position: fixed;
     top: 0;
+    left: 0;
     width: 100%;
     z-index: 1000;
 }
 
 .header-content {
-    max-width: 1200px;
-    margin: 0 auto;
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
 }
 
 header h1 {
+    font-size: 2.5em;
     margin: 0;
-    font-size: 2em;
 }
 
 nav {
@@ -50,7 +50,7 @@ nav a {
     color: #f9fbe7;
     text-decoration: none;
     padding: 10px 15px;
-    font-size: 1em;
+    font-size: 1.1em;
     border-radius: 5px;
     transition: background 0.3s;
 }
@@ -60,8 +60,41 @@ nav a:hover {
 }
 
 main {
+    padding: 80px 20px 20px; /* Adjust padding to avoid content under header */
+    flex: 1;
+}
+
+footer {
+    background: #004d40;
+    color: #f9fbe7;
     padding: 20px;
-    margin-top: 60px; /* Adjust based on header height */
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.footer-logo {
+    width: 120px; /* Adjust width as needed */
+    height: auto; /* Maintain aspect ratio */
+    margin: 10px;
+}
+
+.quick-info {
+    text-align: left;
+}
+
+.quick-info p {
+    margin: 5px 0;
 }
 
 .hero {
@@ -71,25 +104,25 @@ main {
     text-align: center;
 }
 
-.description {
-    padding: 20px;
-    text-align: center;
+.hero h1 {
+    font-size: 3em;
+    margin: 0;
 }
 
-.description h2 {
-    font-size: 2.5em;
-    margin-bottom: 20px;
+.hero p {
+    font-size: 1.5em;
 }
 
-.services, .packages {
+.description, .services, .packages, .scheduling {
+    margin: 40px 0;
     padding: 20px;
-    text-align: center;
+    text-align: left;
 }
 
 .services-container, .packages-container {
     display: flex;
     overflow-x: auto;
-    padding: 10px;
+    width: 100%;
 }
 
 .service-item, .package-item {
@@ -97,23 +130,18 @@ main {
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     padding: 20px;
-    margin: 10px;
-    flex: 1 0 300px; /* Adjust based on preferred box width */
     text-align: center;
+    border: 2px solid #2e7d32;
+    margin: 10px;
+    flex: 0 0 auto; /* Ensures items do not shrink and fit horizontally */
 }
 
 .service-item h3, .package-item h3 {
     margin-top: 0;
 }
 
-.scheduling {
-    padding: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
 .booking-button {
+    display: inline-block;
     background: #2e7d32;
     color: #ffffff;
     padding: 15px 25px;
@@ -128,54 +156,60 @@ main {
     background: #004d40;
 }
 
-footer {
-    background: #004d40;
-    color: #f9fbe7;
-    padding: 20px;
-    position: relative;
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
     width: 100%;
-    text-align: left;
+    height: 100%;
+    background-color: rgba(0,0,0,0.4);
+    padding-top: 60px;
 }
 
-.footer-content {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
 }
 
-.contact-info {
-    text-align: left;
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
 }
 
-.contact-info p {
-    margin: 5px 0;
-}
-
-.footer-logo {
-    width: 100px; /* Adjust as needed */
-    height: auto;
-}
-
-.footer-right {
-    text-align: right;
+.close:hover, .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
 }
 
 @media (max-width: 768px) {
-    .hero {
-        padding: 60px 20px;
-    }
-
-    .service-item, .package-item {
-        margin: 10px 0;
-    }
-
     .services-container, .packages-container {
         flex-direction: column;
     }
 
     .booking-button {
         margin-top: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    nav a {
+        font-size: 0.9em;
+        padding: 6px 10px;
+    }
+
+    .hero h1 {
+        font-size: 2em; /* Adjust hero heading size */
+    }
+
+    .hero p {
+        font-size: 1.2em; /* Adjust hero paragraph size */
     }
 }

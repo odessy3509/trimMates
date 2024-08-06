@@ -1,23 +1,36 @@
-<div id="myModal" class="modal">
+<!-- Booking Modal -->
+<div id="bookingModal" class="modal">
     <div class="modal-content">
         <span class="close">&times;</span>
-        <h2>Booking Form</h2>
-        <form id="bookingForm">
+        <h2>Book a Service</h2>
+        <form id="bookingForm" action="sendEmail.php" method="POST">
             <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required><br><br>
+            <input type="text" id="name" name="name" required>
+            
             <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required><br><br>
+            <input type="email" id="email" name="email" required>
+            
             <label for="phone">Phone:</label>
-            <input type="tel" id="phone" name="phone" required><br><br>
+            <input type="tel" id="phone" name="phone" required>
+            
             <label for="service">Service:</label>
-            <select id="service" name="service" required>
-                <option value="lawn-care">Lawn Care</option>
-                <option value="gutter-cleaning">Gutter Cleaning</option>
-                <option value="bush-trimming">Bush Trimming</option>
-                <option value="custom">Custom Service</option>
-            </select><br><br>
-            <label for="additional">Additional Notes:</label>
-            <textarea id="additional" name="additional"></textarea><br><br>
+            <input type="text" id="service" name="service" placeholder="Enter custom service" required>
+            
+            <label for="package">Select Package (optional):</label>
+            <select id="package" name="package">
+                <option value="">None</option>
+                <option value="package1">Package 1</option>
+                <option value="package2">Package 2</option>
+                <option value="package3">Package 3</option>
+            </select>
+            
+            <label for="paymentMethod">Payment Method:</label>
+            <select id="paymentMethod" name="paymentMethod">
+                <option value="creditCard">Credit Card</option>
+                <option value="paypal">PayPal</option>
+                <option value="bankTransfer">Bank Transfer</option>
+            </select>
+            
             <button type="submit">Submit</button>
         </form>
     </div>

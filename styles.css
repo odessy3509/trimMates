@@ -1,21 +1,10 @@
-* {
-    box-sizing: border-box;
-}
-
-html, body {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    overflow-x: hidden; /* Prevents horizontal scrolling */
-}
-
+/* Basic styles for the page */
 body {
     font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
     background-color: #f9fbe7;
     color: #2e7d32;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
 }
 
 header {
@@ -59,7 +48,7 @@ nav a:hover {
 }
 
 main {
-    padding: 80px 20px 20px; /* Adjust padding to avoid content under header */
+    padding: 80px 20px 20px;
     flex: 1;
 }
 
@@ -84,9 +73,8 @@ footer {
 }
 
 .footer-logo {
-    width: 120px; /* Adjust width as needed */
-    height: auto; /* Maintain aspect ratio */
-    margin: 10px;
+    width: 120px;
+    height: auto;
 }
 
 .quick-info {
@@ -113,7 +101,7 @@ footer {
     font-size: 1.5em;
 }
 
-.description, .services, .packages, .scheduling {
+.description, .services-container, .packages-container, .scheduling {
     margin: 40px 0;
     padding: 20px;
 }
@@ -137,7 +125,7 @@ footer {
     padding: 20px;
     text-align: center;
     border: 2px solid #2e7d32;
-    flex: 0 0 auto; /* Ensures items do not shrink and fit horizontally */
+    flex: 0 0 auto;
 }
 
 .service-item h3, .package-item h3 {
@@ -160,24 +148,26 @@ footer {
     background: #004d40;
 }
 
+/* Modal styles */
 .modal {
-    display: none;
-    position: fixed;
-    z-index: 1000;
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
     left: 0;
     top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0,0,0,0.4);
-    padding-top: 60px;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0,0,0,0.4); /* Black background with opacity */
+    padding-top: 60px; /* Space above modal */
 }
 
 .modal-content {
     background-color: #fefefe;
-    margin: 5% auto;
+    margin: 5% auto; /* Centered with 5% from top */
     padding: 20px;
     border: 1px solid #888;
-    width: 80%;
+    width: 80%; /* Width of the modal */
 }
 
 .close {
@@ -187,7 +177,8 @@ footer {
     font-weight: bold;
 }
 
-.close:hover, .close:focus {
+.close:hover,
+.close:focus {
     color: black;
     text-decoration: none;
     cursor: pointer;
@@ -210,10 +201,10 @@ footer {
     }
 
     .hero h1 {
-        font-size: 2em; /* Adjust hero heading size */
+        font-size: 2em;
     }
 
     .hero p {
-        font-size: 1.2em; /* Adjust hero paragraph size */
+        font-size: 1.2em;
     }
 }

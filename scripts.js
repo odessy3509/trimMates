@@ -1,26 +1,36 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const modal = document.getElementById('bookingModal');
-    const openModalButton = document.getElementById('openModal');
-    const closeModalButton = document.getElementById('closeModal');
+// Get the modal
+var modalContainer = document.getElementById("modalContainer");
 
-    openModalButton.addEventListener('click', () => {
-        modal.style.display = 'block';
-    });
+// Load the modal HTML content
+fetch('modal.html')
+    .then(response => response.text())
+    .then(data => {
+        modalContainer.innerHTML = data;
 
-    closeModalButton.addEventListener('click', () => {
-        modal.style.display = 'none';
-    });
+        // Get the modal
+        var modal = document.getElementById("myModal");
 
-    window.addEventListener('click', (event) => {
-        if (event.target === modal) {
-            modal.style.display = 'none';
+        // Get the button that opens the modal
+        var btn = document.getElementById("openModal");
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks the button, open the modal
+        btn.onclick = function() {
+            modal.style.display = "block";
         }
-    });
 
-    document.getElementById('bookingForm').addEventListener('submit', (event) => {
-        event.preventDefault();
-        alert('Your booking request has been submitted!');
-        modal.style.display = 'none';
-        document.getElementById('bookingForm').reset();
-    });
-});
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    })
+    .catch(error => console.error('Error loading the modal:', error));

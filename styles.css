@@ -3,7 +3,7 @@ html, body {
     margin: 0;
     padding: 0;
     height: 100%;
-    box-sizing: border-box;
+    box-sizing: border-box; /* Ensure padding and borders are included in width and height */
     font-family: Arial, sans-serif; /* Ensure consistent font across devices */
     color: #2e7d32; /* Text color */
     overflow-x: hidden; /* Prevent horizontal scrolling */
@@ -55,6 +55,7 @@ nav a:hover {
 /* Main Content Styles */
 main {
     padding: 20px;
+    width: 100%; /* Ensure main content fits within the page */
 }
 
 /* Hero Section Styles */
@@ -63,6 +64,7 @@ main {
     color: #f9fbe7; /* Hero text color */
     padding: 80px 20px; /* Adjusted padding for better responsiveness */
     text-align: center;
+    width: 100%; /* Ensure hero section fits within the page */
 }
 
 .hero h1 {
@@ -79,6 +81,7 @@ main {
     margin: 40px 0;
     padding: 20px;
     text-align: left;
+    width: 100%; /* Ensure sections fit within the page */
 }
 
 /* Service and Package Item Styles */
@@ -90,10 +93,7 @@ main {
     text-align: center;
     border: 2px solid #2e7d32; /* Border color */
     margin: 10px;
-}
-
-.service-item h3, .package-item h3 {
-    margin-top: 0;
+    box-sizing: border-box; /* Ensure padding and border are included in the width */
 }
 
 /* Booking Button Styles */
@@ -156,6 +156,8 @@ footer {
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
+    width: 100%; /* Ensure footer fits within the page */
+    box-sizing: border-box; /* Include padding and border in the width */
 }
 
 .footer-content {

@@ -119,6 +119,13 @@ footer {
     text-align: left;
 }
 
+.description h2, .services h2, .scheduling h2, .packages h2 {
+    font-size: 2em;
+    margin-top: 0; /* Ensures headers align properly */
+    margin-bottom: 20px; /* Adds space below headers */
+    color: #004d40; /* Ensures consistent color */
+}
+
 .service-item, .package-item {
     background: #ffffff;
     border-radius: 8px;

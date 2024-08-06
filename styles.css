@@ -6,6 +6,7 @@ html, body {
     box-sizing: border-box;
     font-family: Arial, sans-serif; /* Ensure consistent font across devices */
     color: #2e7d32; /* Text color */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
 /* Header Styles */
@@ -35,7 +36,6 @@ nav {
     display: flex;
     gap: 15px;
     flex-wrap: nowrap; /* Prevents wrapping, ensures buttons stay in one row */
-    overflow-x: auto; /* Allows horizontal scrolling if necessary */
 }
 
 nav a {
@@ -183,7 +183,7 @@ footer {
 /* Responsive Styles */
 @media (max-width: 768px) {
     nav {
-        flex-wrap: nowrap;
+        flex-wrap: wrap;
     }
 
     nav a {

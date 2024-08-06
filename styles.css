@@ -1,167 +1,133 @@
-/* Basic styles for the page */
+/* General Styles */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f9fbe7;
-    color: #2e7d32;
+    overflow-y: scroll;
+    padding-top: 80px; /* Adjust this value to the height of your header to prevent content from being hidden behind it */
 }
 
+/* Hide vertical scrollbar */
+body::-webkit-scrollbar {
+    width: 0;
+    background: transparent; /* Optional: to keep it invisible */
+}
+
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* Header Styles */
 header {
-    background: #004d40;
-    color: #f9fbe7;
-    padding: 10px 20px;
+    background: #333;
+    color: #fff;
+    padding: 20px 0;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 1000;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    z-index: 1000; /* Ensures it stays above other content */
 }
 
-.header-content h1 {
+header .container {
+    display: flex;
+    justify-content: space-between; /* Space between items */
+    align-items: center;
+}
+
+header h1 {
     margin: 0;
-    font-size: 2.5em;
+    text-align: left;
 }
 
 nav {
-    display: flex;
-    gap: 15px;
+    margin-left: auto; /* Aligns the nav to the right */
 }
 
-nav a {
-    color: #f9fbe7;
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex; /* Aligns list items horizontally */
+}
+
+
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff;
     text-decoration: none;
-    padding: 10px 15px;
-    font-size: 1.1em;
-    border-radius: 5px;
-    transition: background 0.3s;
-}
-
-nav a:hover {
-    background: #00796b;
-}
-
-main {
-    padding: 80px 20px 20px;
 }
 
 section {
-    margin: 40px 0;
+    padding: 40px 0;
 }
 
-.hero {
-    background: url('landscaping.jpg') no-repeat center center/cover;
-    color: #f9fbe7;
-    padding: 100px 20px;
-    text-align: center;
+h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
 }
 
-.hero h1 {
-    font-size: 3em;
-    margin: 0;
-}
-
-.hero p {
-    font-size: 1.5em;
-}
-
-.description {
-    text-align: left;
-}
-
-.services-container, .packages-container {
-    display: flex;
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    padding: 10px 0;
-    gap: 10px;
-    width: 100%;
-}
-
-.service-item, .package-item {
-    background: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    padding: 20px;
-    text-align: center;
-    border: 2px solid #2e7d32;
-    flex: 0 0 auto;
-    min-width: 200px;
-}
-
-.service-item h3, .package-item h3 {
-    margin-top: 0;
-}
-
-.booking-button {
-    display: inline-block;
-    background: #2e7d32;
-    color: #ffffff;
-    padding: 15px 25px;
-    font-size: 1.2em;
-    text-decoration: none;
+button {
+    background: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
-    transition: background 0.3s;
 }
 
-.booking-button:hover {
-    background: #004d40;
+button:hover {
+    background: #0056b3;
 }
 
 footer {
-    background: #004d40;
-    color: #f9fbe7;
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
+    background: #333;
+    color: #fff;
+    padding: 20px 0;
     position: relative;
-    width: 100%;
-    box-sizing: border-box;
+    bottom: 0;
 }
 
-.footer-content {
+footer .container {
     display: flex;
     justify-content: space-between;
-    width: 100%;
     align-items: center;
 }
 
-.footer-logo {
-    width: 120px;
-    height: auto;
+footer .footer-left a {
+    color: #fff;
+    text-decoration: none;
 }
 
-.quick-info {
-    text-align: left;
-}
-
-.quick-info p {
-    margin: 5px 0;
-}
-
+/* Modal Styles */
 .modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1000; /* Sit on top */
+    display: none;
+    position: fixed;
+    z-index: 1;
     left: 0;
     top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgba(0,0,0,0.4); /* Black background with opacity */
-    padding-top: 60px; /* Space above modal */
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding-top: 60px;
 }
 
 .modal-content {
-    background-color: #fefefe;
-    margin: 5% auto; /* Centered with 5% from top */
+    background-color: #fff;
+    margin: 10% auto; /* Center modal vertically and horizontally */
     padding: 20px;
     border: 1px solid #888;
-    width: 80%; /* Width of the modal */
+    width: 80%;
+    max-width: 600px;
+    border-radius: 8px;
 }
 
 .close {
@@ -173,32 +139,115 @@ footer {
 
 .close:hover,
 .close:focus {
-    color: black;
+    color: #000;
     text-decoration: none;
     cursor: pointer;
 }
 
-@media (max-width: 768px) {
-    .services-container, .packages-container {
-        flex-direction: column;
-    }
 
-    .booking-button {
-        margin-top: 20px;
-    }
+/* Form Styles */
+form {
+    display: flex;
+    flex-direction: column;
 }
 
-@media (max-width: 480px) {
-    nav a {
-        font-size: 0.9em;
-        padding: 6px 10px;
-    }
+label {
+    margin: 10px 0 5px;
+}
 
-    .hero h1 {
-        font-size: 2em;
-    }
+input, select {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
 
-    .hero p {
-        font-size: 1.2em;
+input[type="text"][style*="display: none;"] {
+    display: none;
+}
+
+button {
+    align-self: flex-start;
+    background: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+.note {
+    font-size: 0.9em;
+    color: #555;
+    margin-top: -10px;
+    margin-bottom: 15px;
+}
+
+
+/* Services and Packages Section Styles */
+.service-boxes,
+.package-boxes {
+    display: flex;
+    overflow-x: auto; /* Allows horizontal scrolling if content overflows */
+    gap: 20px;
+    padding: 10px 0; /* Optional: Adds vertical padding */
+}
+
+.service-box,
+.package-box {
+    flex: 0 0 auto; /* Prevents the boxes from shrinking */
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    width: 300px; /* Adjust width as needed */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.service-box img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.package-box {
+    background-color: #f4f4f4;
+    border: 1px solid #ccc;
+}
+
+/* Additional Styles for Address and Terms of Service */
+label[for="address"] {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+input#address {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+}
+
+label[for="terms"] {
+    display: block;
+    margin: 20px 0 10px;
+}
+
+input#terms {
+    margin-right: 10px;
+}
+
+
+/* Adjustments for responsiveness */
+@media (max-width: 768px) {
+    .service-box,
+    .package-box {
+        width: 100%;
+        max-width: 100%;
     }
 }

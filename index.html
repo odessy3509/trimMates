@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
     <header>
         <div class="header-content">
             <h1>Trim Mates</h1>
@@ -15,10 +16,12 @@
                 <a href="#about">About Us</a>
                 <a href="#services">Services</a>
                 <a href="#packages">Packages</a>
+                <a href="#scheduling">Scheduling</a>
                 <a href="#contact">Contact</a>
             </nav>
         </div>
     </header>
+
     <main>
         <div class="hero" id="home">
             <h1>Welcome to Trim Mates</h1>
@@ -60,35 +63,22 @@
             <button class="booking-button" id="openModal">Book Now</button>
         </div>
     </main>
-    <footer>
+
+    <footer id="contact">
         <div class="footer-content">
+            <img src="logo.png" alt="Trim Mates Logo" class="footer-logo">
             <div class="quick-info">
                 <p>&copy; 2024 Trim Mates. All rights reserved.</p>
                 <p>Contact us: (123) 456-7890 | info@trimmates.com</p>
-                <p>Follow us on Facebook and Instagram</p>
+                <p>Facebook | Instagram</p>
             </div>
-            <img src="logo.png" alt="Trim Mates Logo" class="footer-logo">
         </div>
     </footer>
 
-    <!-- The Modal -->
-    <div id="bookingModal" class="modal">
-        <div class="modal-content">
-            <span class="close" id="closeModal">&times;</span>
-            <h2>Booking Form</h2>
-            <form id="bookingForm">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required><br><br>
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required><br><br>
-                <label for="date">Date:</label>
-                <input type="date" id="date" name="date" required><br><br>
-                <label for="time">Time:</label>
-                <input type="time" id="time" name="time" required><br><br>
-                <input type="submit" value="Submit">
-            </form>
-        </div>
-    </div>
-    <script src="modal.js"></script>
+    <!-- Include the modal -->
+    <div id="modalContainer"></div>
+
+    <!-- Include scripts -->
+    <script src="scripts.js"></script>
 </body>
 </html>

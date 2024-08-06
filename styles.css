@@ -113,6 +113,8 @@ footer {
     font-size: 1.5em;
 }
 
+/* Existing styles ... */
+
 .description, .services, .scheduling, .packages {
     margin: 40px 0;
     padding: 20px;
@@ -121,9 +123,9 @@ footer {
 
 .description h2, .services h2, .scheduling h2, .packages h2 {
     font-size: 2em;
-    margin-top: 0; /* Ensures headers align properly */
-    margin-bottom: 20px; /* Adds space below headers */
-    color: #004d40; /* Ensures consistent color */
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #004d40;
 }
 
 .service-item, .package-item {
@@ -139,6 +141,9 @@ footer {
 .service-item h3, .package-item h3 {
     margin-top: 0;
 }
+
+/* Ensure other styles are consistent ... */
+
 
 .booking-button {
     display: inline-block;

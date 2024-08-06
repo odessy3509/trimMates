@@ -1,42 +1,46 @@
-/* General Reset */
+* {
+    box-sizing: border-box;
+}
+
 html, body {
     margin: 0;
     padding: 0;
     height: 100%;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-    color: #2e7d32;
     overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
-/* Ensure all elements use border-box */
-*, *::before, *::after {
-    box-sizing: inherit;
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9fbe7;
+    color: #2e7d32;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
-/* Header Styles */
 header {
     background: #004d40;
     color: #f9fbe7;
     padding: 10px 20px;
-    text-align: left;
-    position: -webkit-sticky;
-    position: sticky;
+    position: fixed;
     top: 0;
-    z-index: 1000;
     width: 100%;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
 }
 
-/* Header Content */
 .header-content {
+    max-width: 1200px;
+    margin: 0 auto;
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    flex-wrap: wrap;
+    align-items: center;
 }
 
-/* Navigation Styles */
+header h1 {
+    margin: 0;
+    font-size: 2em;
+}
+
 nav {
     display: flex;
     gap: 15px;
@@ -46,65 +50,74 @@ nav a {
     color: #f9fbe7;
     text-decoration: none;
     padding: 10px 15px;
-    font-size: 1rem;
+    font-size: 1em;
     border-radius: 5px;
     transition: background 0.3s;
-    white-space: nowrap; /* Prevent wrapping */
 }
 
 nav a:hover {
     background: #00796b;
 }
 
-/* Main Content Styles */
 main {
     padding: 20px;
-    margin: 0 auto;
-    max-width: 1200px;
+    margin-top: 60px; /* Adjust based on header height */
 }
 
-/* Hero Section Styles */
 .hero {
     background: url('landscaping.jpg') no-repeat center center/cover;
     color: #f9fbe7;
-    padding: 80px 20px;
+    padding: 100px 20px;
     text-align: center;
 }
 
-.hero h1 {
-    font-size: 2.5rem;
-    margin: 0;
-}
-
-.hero p {
-    font-size: 1.2rem;
-}
-
-/* Section Styles */
-.description, .services, .scheduling, .packages {
-    margin: 40px 0;
+.description {
     padding: 20px;
-    text-align: left;
+    text-align: center;
 }
 
-/* Service and Package Item Styles */
+.description h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.services, .packages {
+    padding: 20px;
+    text-align: center;
+}
+
+.services-container, .packages-container {
+    display: flex;
+    overflow-x: auto;
+    padding: 10px;
+}
+
 .service-item, .package-item {
     background: #ffffff;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     padding: 20px;
-    text-align: center;
-    border: 2px solid #2e7d32;
     margin: 10px;
+    flex: 1 0 300px; /* Adjust based on preferred box width */
+    text-align: center;
 }
 
-/* Booking Button Styles */
+.service-item h3, .package-item h3 {
+    margin-top: 0;
+}
+
+.scheduling {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
 .booking-button {
-    display: inline-block;
     background: #2e7d32;
     color: #ffffff;
     padding: 15px 25px;
-    font-size: 1.1rem;
+    font-size: 1.2em;
     text-decoration: none;
     border-radius: 5px;
     cursor: pointer;
@@ -115,89 +128,54 @@ main {
     background: #004d40;
 }
 
-/* Modal Styles */
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 1000;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.4);
-    padding-top: 60px;
-}
-
-.modal-content {
-    background-color: #fefefe;
-    margin: 5% auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
-}
-
-.close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-}
-
-.close:hover, .close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-/* Footer Styles */
 footer {
     background: #004d40;
     color: #f9fbe7;
     padding: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    position: relative;
+    width: 100%;
+    text-align: left;
 }
 
 .footer-content {
     max-width: 1200px;
     margin: 0 auto;
-    width: 100%;
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
 }
 
-.footer-logo {
-    width: 50px;
+.contact-info {
+    text-align: left;
 }
 
-.quick-info p {
+.contact-info p {
     margin: 5px 0;
 }
 
-/* Responsive Styles */
-@media (max-width: 768px) {
-    nav {
-        flex-direction: column;
-        align-items: center;
-    }
+.footer-logo {
+    width: 100px; /* Adjust as needed */
+    height: auto;
+}
 
+.footer-right {
+    text-align: right;
+}
+
+@media (max-width: 768px) {
     .hero {
         padding: 60px 20px;
     }
 
     .service-item, .package-item {
-        margin: 20px 0;
+        margin: 10px 0;
     }
 
-    .footer-content {
+    .services-container, .packages-container {
         flex-direction: column;
-        text-align: center;
     }
 
-    .footer-logo {
-        margin-bottom: 10px;
+    .booking-button {
+        margin-top: 20px;
     }
 }

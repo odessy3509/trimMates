@@ -3,82 +3,169 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trim Mates</title>
+    <title>Trim Mates - Landscaping Services</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
+    <!-- Header -->
     <header>
-        <div class="header-content">
+        <div class="container">
             <h1>Trim Mates</h1>
             <nav>
-                <a href="#home">Home</a>
-                <a href="#about">About Us</a>
-                <a href="#services">Services</a>
-                <a href="#packages">Packages</a>
-                <a href="#scheduling">Scheduling</a>
-                <a href="#contact">Contact</a>
+                <ul>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#services" class="nav-link">Services</a></li>
+                    <li><a href="#packages" class="nav-link">Packages</a></li>
+                    <li><a href="#scheduling" class="nav-link">Scheduling</a></li>
+                    <li><a href="#footer" class="nav-link">Contact</a></li>
+                </ul>
             </nav>
         </div>
     </header>
 
-    <main>
-        <section class="hero" id="home">
-            <h1>Welcome to Trim Mates</h1>
-            <p>Your expert partners in landscaping and garden care</p>
-        </section>
-        <section class="description" id="about">
-            <h2>About Trim Mates</h2>
-            <p>Our business is founded by three energetic and dedicated young professionals who are passionate about transforming outdoor spaces. We specialize in lawn mowing, bush trimming, window cleaning, and comprehensive yard cleanups. Our team is committed to delivering top-notch service with attention to detail, ensuring your property looks immaculate and well-maintained. With a blend of hard work, expertise, and modern equipment, we take pride in creating beautiful, pristine yards for our clients. Let us handle your outdoor chores, so you can enjoy a perfectly manicured and clean environment.</p>
-        </section>
-        <section class="services-container" id="services">
-            <h2>Our Services</h2>
-            <div class="service-item">
-                <h3>Lawn Care</h3>
-                <p>Keep your lawn lush and healthy with our professional care services.</p>
-            </div>
-            <div class="service-item">
-                <h3>Gutter Cleaning</h3>
-                <p>Clean those gutters to prevent water damage.</p>
-            </div>
-            <div class="service-item">
-                <h3>Bush Trimming</h3>
-                <p>Ensure the health and safety of your bushes with our expert trimming services.</p>
-            </div>
-        </section>
-        <section class="packages-container" id="packages">
-            <h2>Our Packages</h2>
-            <div class="package-item">
-                <h3>Basic Package</h3>
-                <p>Description of the basic package.</p>
-            </div>
-            <div class="package-item">
-                <h3>Premium Package</h3>
-                <p>Description of the premium package.</p>
-            </div>
-        </section>
-        <section class="scheduling" id="scheduling">
-            <h2>Schedule a Service</h2>
-            <p>Contact us to book an appointment for our services at your convenience.</p>
-            <button class="booking-button" id="openModal">Book Now</button>
-        </section>
-    </main>
+    <!-- Welcome Section -->
+    <section id="about">
+        <div class="container">
+            <h2>welcome</h2>
+            <p>hello.....</p>
+        </div>
+    </section>
 
-    <footer id="contact">
-        <div class="footer-content">
-            <img src="logo.png" alt="Trim Mates Logo" class="footer-logo">
-            <div class="quick-info">
-                <p>&copy; 2024 Trim Mates. All rights reserved.</p>
-                <p>Contact us: (123) 456-7890 | info@trimmates.com</p>
-                <p>Facebook | Instagram</p>
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <h2>About Us</h2>
+            <p>Description.....</p>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services">
+        <div class="container">
+            <h2>Our Services</h2>
+            <div class="service-boxes">
+                <div class="service-box">
+                    <img src="service1.jpg" alt="Service 1 Image">
+                    <h3>Service 1</h3>
+                    <p>Detail about Service 1.</p>
+                </div>
+                <div class="service-box">
+                    <img src="service2.jpg" alt="Service 2 Image">
+                    <h3>Service 2</h3>
+                    <p>Detail about Service 2.</p>
+                </div>
+                <div class="service-box">
+                    <img src="service3.jpg" alt="Service 3 Image">
+                    <h3>Service 3</h3>
+                    <p>Detail about Service 3.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Packages Section -->
+    <section id="packages">
+        <div class="container">
+            <h2>Our Packages</h2>
+            <div class="package-boxes">
+                <div class="package-box">
+                    <h3>Package 1</h3>
+                    <p>Detail about Package 1.</p>
+                </div>
+                <div class="package-box">
+                    <h3>Package 2</h3>
+                    <p>Detail about Package 2.</p>
+                </div>
+                <div class="package-box">
+                    <h3>Package 3</h3>
+                    <p>Detail about Package 3.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scheduling Section -->
+    <section id="scheduling">
+        <div class="container">
+            <h2>Schedule a Service</h2>
+            <p>scheduling.....</p>
+            <button id="bookNowBtn">Book Now</button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="container">
+            <div class="footer-left">
+                <p>Contact Us: (555) 123-4567 | email@example.com</p>
+                <p>
+                    <a href="https://facebook.com" target="_blank">Facebook</a> |
+                    <a href="https://instagram.com" target="_blank">Instagram</a>
+                </p>
+            </div>
+            <div class="footer-right">
+                <p>&copy; 2024 Trim Mates | <img src="logo.png" alt="Trim Mates Logo"></p>
             </div>
         </div>
     </footer>
 
-    <!-- Include the modal -->
-    <div id="modalContainer"></div>
+   <!-- Booking Modal -->
+<div id="bookingModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Book a Service</h2>
+        <form id="bookingForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
 
-    <!-- Include scripts -->
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="address">Address:</label>
+            <input type="text" id="address" name="address" required>
+
+            <label for="service">Service:</label>
+            <select id="service" name="service">
+                <option value="">Select a service</option>
+                <option value="service1">Service 1</option>
+                <option value="service2">Service 2</option>
+                <option value="service3">Service 3</option>
+                <option value="custom">Custom Service</option>
+            </select>
+            <input type="text" id="customService" name="customService" placeholder="Enter custom service" style="display: none;">
+
+            <label for="package">Select Package (optional):</label>
+            <select id="package" name="package">
+                <option value="">None</option>
+                <option value="package1">Package 1</option>
+                <option value="package2">Package 2</option>
+                <option value="package3">Package 3</option>
+            </select>
+
+            <label for="paymentMethod">Payment Method:</label>
+            <select id="paymentMethod" name="paymentMethod">
+                <option value="cash">Cash</option>
+                <option value="venmo">Venmo</option>
+                <option value="paypal">PayPal</option>
+                <option value="cashApp">Cash App</option>
+                <option value="check">Check</option>
+            </select>
+            <p class="note">Please note: Payment will be collected at the door.</p>
+
+            <label for="terms">
+                <input type="checkbox" id="terms" name="terms" required>
+                I agree to the <a href="terms.html" target="_blank">Terms of Service</a>.
+            </label>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</div>
+
+
     <script src="scripts.js"></script>
 </body>
 </html>

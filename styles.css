@@ -2,12 +2,17 @@
     box-sizing: border-box;
 }
 
+/* General Reset */
 html, body {
     margin: 0;
     padding: 0;
     height: 100%;
-    overflow: hidden; /* Hides scrollbars but allows scrolling */
+    box-sizing: border-box;
 }
+
+
+
+
 
 body {
     font-family: Arial, sans-serif;
@@ -68,9 +73,10 @@ nav a:hover {
     background: #00796b;
 }
 
+/* Ensure no margin or padding on main content */
 main {
+    margin: 0;
     padding: 20px;
-    flex: 1;
 }
 
 /* Footer Styles */

@@ -75,13 +75,32 @@ footer {
     flex-wrap: wrap;
 }
 
+/* Footer Styles */
 .footer-content {
     display: flex;
     align-items: center;
-    width: 100%;
     justify-content: space-between;
+    flex-wrap: wrap;
     text-align: center;
 }
+
+.contact-button {
+    display: inline-block;
+    background: #2e7d32;
+    color: #ffffff;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin-top: 10px;
+}
+
+.contact-button:hover {
+    background: #004d40;
+}
+
 
 .footer-logo {
     width: 120px; /* Adjust width as needed */

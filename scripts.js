@@ -1,25 +1,26 @@
-// JavaScript for Modal
-document.getElementById('openModal').addEventListener('click', function() {
-    document.getElementById('bookingModal').style.display = 'block';
-});
+document.addEventListener('DOMContentLoaded', () => {
+    const modal = document.getElementById('bookingModal');
+    const openModalButton = document.getElementById('openModal');
+    const closeModalButton = document.getElementById('closeModal');
 
-document.getElementById('closeModal').addEventListener('click', function() {
-    document.getElementById('bookingModal').style.display = 'none';
-});
+    openModalButton.addEventListener('click', () => {
+        modal.style.display = 'block';
+    });
 
-window.addEventListener('click', function(event) {
-    if (event.target == document.getElementById('bookingModal')) {
-        document.getElementById('bookingModal').style.display = 'none';
-    }
-});
+    closeModalButton.addEventListener('click', () => {
+        modal.style.display = 'none';
+    });
 
-// JavaScript for Smooth Scroll to Footer
-document.querySelector('a[href="#footer"]').addEventListener('click', function(event) {
-    event.preventDefault(); // Prevent default anchor behavior
+    window.addEventListener('click', (event) => {
+        if (event.target === modal) {
+            modal.style.display = 'none';
+        }
+    });
 
-    // Get the footer element
-    const footer = document.getElementById('footer');
-    
-    // Scroll to the footer with smooth behavior
-    footer.scrollIntoView({ behavior: 'smooth' });
+    document.getElementById('bookingForm').addEventListener('submit', (event) => {
+        event.preventDefault();
+        alert('Your booking request has been submitted!');
+        modal.style.display = 'none';
+        document.getElementById('bookingForm').reset();
+    });
 });

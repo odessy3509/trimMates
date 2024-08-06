@@ -17,15 +17,23 @@ body {
     flex-direction: column;
     min-height: 100vh;
     overflow: auto; /* Enables scrolling */
+    padding-top: 60px; 
 }
 
+/* Header Styles */
 header {
     background: #004d40;
     color: #f9fbe7;
     padding: 10px 20px;
     text-align: left;
-    position: relative;
+    position: -webkit-sticky; /* For Safari */
+    position: sticky; /* Standard syntax */
+    top: 0; /* Stick to the top */
+    z-index: 1000; /* Ensure it's above other content */
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Optional: Add shadow for better visibility */
 }
+
 
 .header-content {
     display: flex;

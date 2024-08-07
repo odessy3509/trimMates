@@ -1,3 +1,4 @@
+
 // JavaScript for handling the modal
 document.addEventListener('DOMContentLoaded', function() {
     var modal = document.getElementById("bookingModal");

@@ -23,12 +23,11 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section id="hero">
-        <div class="hero-content">
-            <h2>Transform Your Landscape</h2>
-            <p>Professional landscaping services to enhance your outdoor spaces.</p>
-            <a href="#scheduling" class="cta-button">Book Now</a>
+    <!-- Welcome Section -->
+    <section id="about">
+        <div class="container">
+            <h2>welcome</h2>
+            <p>hello.....</p>
         </div>
     </section>
 
@@ -45,7 +44,21 @@
         <div class="container">
             <h2>Our Services</h2>
             <div class="service-boxes">
-                <!-- Service boxes here -->
+                <div class="service-box">
+                    <img src="service1.jpg" alt="Service 1 Image">
+                    <h3>Service 1</h3>
+                    <p>Detail about Service 1.</p>
+                </div>
+                <div class="service-box">
+                    <img src="service2.jpg" alt="Service 2 Image">
+                    <h3>Service 2</h3>
+                    <p>Detail about Service 2.</p>
+                </div>
+                <div class="service-box">
+                    <img src="service3.jpg" alt="Service 3 Image">
+                    <h3>Service 3</h3>
+                    <p>Detail about Service 3.</p>
+                </div>
             </div>
         </div>
     </section>
@@ -55,7 +68,18 @@
         <div class="container">
             <h2>Our Packages</h2>
             <div class="package-boxes">
-                <!-- Package boxes here -->
+                <div class="package-box">
+                    <h3>Package 1</h3>
+                    <p>Detail about Package 1.</p>
+                </div>
+                <div class="package-box">
+                    <h3>Package 2</h3>
+                    <p>Detail about Package 2.</p>
+                </div>
+                <div class="package-box">
+                    <h3>Package 3</h3>
+                    <p>Detail about Package 3.</p>
+                </div>
             </div>
         </div>
     </section>
@@ -64,7 +88,7 @@
     <section id="scheduling">
         <div class="container">
             <h2>Schedule a Service</h2>
-            <p>Scheduling.....</p>
+            <p>scheduling.....</p>
             <button id="bookNowBtn">Book Now</button>
         </div>
     </section>
@@ -86,8 +110,96 @@
     </footer>
 
    <!-- Booking Modal -->
-   <!-- Booking modal code here -->
+<div id="bookingModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Book a Service</h2>
+        <form id="bookingForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="address">Address:</label>
+            <input type="text" id="address" name="address" required>
+
+            <label for="service">Service:</label>
+            <select id="service" name="service">
+                <option value="">Select a service</option>
+                <option value="service1">Service 1</option>
+                <option value="service2">Service 2</option>
+                <option value="service3">Service 3</option>
+                <option value="custom">Custom Service</option>
+            </select>
+            <input type="text" id="customService" name="customService" placeholder="Enter custom service" style="display: none;">
+
+            <label for="package">Select Package (optional):</label>
+            <select id="package" name="package">
+                <option value="">None</option>
+                <option value="package1">Package 1</option>
+                <option value="package2">Package 2</option>
+                <option value="package3">Package 3</option>
+            </select>
+
+            <label for="paymentMethod">Payment Method:</label>
+            <select id="paymentMethod" name="paymentMethod">
+                <option value="cash">Cash</option>
+                <option value="venmo">Venmo</option>
+                <option value="paypal">PayPal</option>
+                <option value="cashApp">Cash App</option>
+                <option value="check">Check</option>
+            </select>
+            <p class="note">Please note: Payment will be collected at the door.</p>
+
+            <label for="terms">
+                <input type="checkbox" id="terms" name="terms" required>
+                I agree to the <a href="terms.html" target="_blank">Terms of Service</a>.
+            </label>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</div>
+
 
     <script src="scripts.js"></script>
 </body>
 </html>
+
+
+
+
+// JavaScript for handling the modal
+document.addEventListener('DOMContentLoaded', function() {
+    var modal = document.getElementById("bookingModal");
+    var btn = document.getElementById("bookNowBtn");
+    var span = document.getElementsByClassName("close")[0];
+    var serviceSelect = document.getElementById("service");
+    var customServiceInput = document.getElementById("customService");
+
+    btn.onclick = function() {
+        modal.style.display = "block";
+    }
+
+    span.onclick = function() {
+        modal.style.display = "none";
+    }
+
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+
+    serviceSelect.addEventListener('change', function() {
+        if (this.value === "custom") {
+            customServiceInput.style.display = "block";
+        } else {
+            customServiceInput.style.display = "none";
+        }
+    });
+});

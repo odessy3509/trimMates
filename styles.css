@@ -101,10 +101,23 @@ footer .container {
     align-items: center;
 }
 
-footer .footer-left a {
+.footer-left a {
     color: #fff;
     text-decoration: none;
+    margin-right: 10px;
 }
+
+.footer-right {
+    display: flex;
+    align-items: center;
+}
+
+.footer-logo {
+    width: 50px; /* Adjust the width to shrink the logo size */
+    height: auto; /* Maintain the aspect ratio */
+    margin-right: 10px;
+}
+
 
 /* Modal Styles */
 .modal {

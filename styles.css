@@ -3,60 +3,37 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    overflow-y: scroll;
-    padding-top: 80px; /* Adjust this value to the height of your header to prevent content from being hidden behind it */
-}
-
-/* Hide vertical scrollbar */
-body::-webkit-scrollbar {
-    width: 0;
-    background: transparent; /* Optional: to keep it invisible */
-}
-
-
-.container {
-    width: 80%;
-    margin: 0 auto;
 }
 
 /* Header Styles */
 header {
     background: #333;
     color: #fff;
-    padding: 20px 0;
+    padding: 20px;
     position: fixed;
     top: 0;
-    left: 0;
     width: 100%;
-    z-index: 1000; /* Ensures it stays above other content */
+    z-index: 1000;
 }
 
-header .container {
+.header-container {
     display: flex;
-    justify-content: space-between; /* Space between items */
+    justify-content: space-between;
     align-items: center;
 }
 
-header h1 {
-    margin: 0;
-    text-align: left;
-}
-
-nav {
-    margin-left: auto; /* Aligns the nav to the right */
+.logo {
+    width: 150px;
 }
 
 nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
-    display: flex; /* Aligns list items horizontally */
+    display: flex;
 }
 
-
-
 nav ul li {
-    display: inline;
     margin-right: 20px;
 }
 
@@ -65,202 +42,76 @@ nav ul li a {
     text-decoration: none;
 }
 
-section {
-    padding: 40px 0;
-}
-
-h2 {
-    font-size: 2em;
-    margin-bottom: 20px;
-}
-
-button {
-    background: #007bff;
+/* Hero Section */
+#hero {
+    background: url('hero-bg.jpg') no-repeat center center;
+    background-size: cover;
     color: #fff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-button:hover {
-    background: #0056b3;
-}
-
-footer {
-    background: #333;
-    color: #fff;
-    padding: 20px 0;
-    position: relative;
-    bottom: 0;
-}
-
-footer .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.footer-left a {
-    color: #fff;
-    text-decoration: none;
-    margin-right: 10px;
-}
-
-.footer-right {
-    display: flex;
-    align-items: center;
-}
-
-.footer-logo {
-    width: 50px; /* Adjust the width to shrink the logo size */
-    height: auto; /* Maintain the aspect ratio */
-    margin-right: 10px;
-}
-
-
-/* Modal Styles */
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.4);
-    padding-top: 60px;
-}
-
-.modal-content {
-    background-color: #fff;
-    margin: 10% auto; /* Center modal vertically and horizontally */
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
-    max-width: 600px;
-    border-radius: 8px;
-}
-
-.close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-    color: #000;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-
-/* Form Styles */
-form {
-    display: flex;
-    flex-direction: column;
-}
-
-label {
-    margin: 10px 0 5px;
-}
-
-input, select {
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-input[type="text"][style*="display: none;"] {
-    display: none;
-}
-
-button {
-    align-self: flex-start;
-    background: #007bff;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-button:hover {
-    background: #0056b3;
-}
-
-.note {
-    font-size: 0.9em;
-    color: #555;
-    margin-top: -10px;
-    margin-bottom: 15px;
-}
-
-
-/* Services and Packages Section Styles */
-.service-boxes,
-.package-boxes {
-    display: flex;
-    overflow-x: auto; /* Allows horizontal scrolling if content overflows */
-    gap: 20px;
-    padding: 10px 0; /* Optional: Adds vertical padding */
-}
-
-.service-box,
-.package-box {
-    flex: 0 0 auto; /* Prevents the boxes from shrinking */
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 20px;
-    width: 300px; /* Adjust width as needed */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 100px 20px;
     text-align: center;
 }
 
-.service-box img {
-    max-width: 100%;
+.cta-button {
+    background: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.cta-button:hover {
+    background: #0056b3;
+}
+
+/* Sections */
+section {
+    padding: 60px 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Services and Packages Section Styles */
+.service-grid, .package-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.service-box, .package-box {
+    background: #f4f4f4;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    flex: 1 1 30%;
+}
+
+.service-box img, .package-box img {
+    width: 100%;
     height: auto;
     border-radius: 8px;
-    margin-bottom: 15px;
 }
 
-.package-box {
-    background-color: #f4f4f4;
-    border: 1px solid #ccc;
+/* Contact Section */
+.contact-info {
+    margin-top: 20px;
 }
 
-/* Additional Styles for Address and Terms of Service */
-label[for="address"] {
-    display: block;
-    margin: 10px 0 5px;
+.contact-info a {
+    color: #007bff;
+    text-decoration: none;
 }
 
-input#address {
-    width: 100%;
-    padding: 8px;
-    margin-bottom: 10px;
+.contact-info a:hover {
+    text-decoration: underline;
 }
 
-label[for="terms"] {
-    display: block;
-    margin: 20px 0 10px;
-}
-
-input#terms {
-    margin-right: 10px;
-}
-
-
-/* Adjustments for responsiveness */
-@media (max-width: 768px) {
-    .service-box,
-    .package-box {
-        width: 100%;
-        max-width: 100%;
-    }
+/* Footer */
+footer {
+    background: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
 }

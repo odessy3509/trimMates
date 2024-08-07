@@ -1,3 +1,4 @@
+
 /* General Styles */
 body {
     font-family: Arial, sans-serif;
@@ -87,36 +88,103 @@ button:hover {
     background: #0056b3;
 }
 
+/* Footer Styles */
 footer {
     background: #333;
     color: #fff;
-    padding: 20px 0;
-    position: relative;
-    bottom: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
 }
 
 footer .container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* First Row */
+.footer-row-1 {
+    padding-bottom: 20px; /* Space between rows */
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
 }
 
-.footer-left a {
+.footer-col {
+    flex: 1;
+    padding: 10px;
+}
+
+.footer-col-1 {
+    flex: 2;
+    max-width: 300px; /* Adjust to control inward placement */
+}
+
+.footer-col-1 p,
+.footer-col-1 .social-links {
+    margin: 0;
+}
+
+.footer-col-1 p {
+    margin-bottom: 10px; /* Space between contact info and social links */
+}
+
+.footer-col-1 span {
+    display: block; /* Ensures each line of contact info is on its own line */
+    margin-bottom: 10px; /* Space between each line */
+}
+
+.social-links {
+    display: flex;
+    flex-direction: column; /* Stack links vertically */
+    gap: 10px; /* Space between each social link */
+}
+
+.social-links a {
+    color: #fff; /* White text color */
+    text-decoration: none; /* Remove underline */
+}
+
+.social-links a:hover {
+    text-decoration: underline; /* Optional: underline on hover */
+}
+
+/* Second Row */
+.footer-row-2 {
+    padding-bottom: 20px; /* Space between rows */
+    display: flex;
+    justify-content: center;
+}
+
+.footer-nav {
+    display: flex;
+    gap: 10px; /* Space between nav buttons */
+}
+
+.footer-nav a {
     color: #fff;
     text-decoration: none;
-    margin-right: 10px;
+    padding: 10px;
 }
 
-.footer-right {
-    display: flex;
-    align-items: center;
+.footer-nav a:hover {
+    background: #444;
+    border-radius: 5px;
 }
 
-.footer-logo {
-    width: 50px; /* Adjust the width to shrink the logo size */
-    height: auto; /* Maintain the aspect ratio */
-    margin-right: 10px;
+/* Third Row */
+.footer-row-3 {
+    text-align: center;
+    margin-top: 20px; /* Optional: Add margin to separate from nav buttons */
 }
+
+.footer-row-3 p {
+    margin: 0;
+}
+
+
+
 
 
 /* Modal Styles */

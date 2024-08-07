@@ -3,27 +3,32 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
 }
 
 /* Header Styles */
 header {
     background: #333;
     color: #fff;
-    padding: 20px;
+    padding: 20px 0;
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 1000;
 }
 
-.header-container {
+header .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.logo {
-    width: 150px;
+header h1 {
+    margin: 0;
+}
+
+nav {
+    margin-left: auto;
 }
 
 nav ul {
@@ -44,11 +49,15 @@ nav ul li a {
 
 /* Hero Section */
 #hero {
-    background: url('hero-bg.jpg') no-repeat center center;
-    background-size: cover;
+    background: url('hero-bg.jpg') no-repeat center center/cover;
     color: #fff;
-    padding: 100px 20px;
+    padding: 80px 0;
     text-align: center;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 .cta-button {
@@ -63,55 +72,77 @@ nav ul li a {
     background: #0056b3;
 }
 
-/* Sections */
+/* Section Styles */
 section {
-    padding: 60px 20px;
+    padding: 40px 0;
 }
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
+h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
 }
 
 /* Services and Packages Section Styles */
-.service-grid, .package-grid {
+.service-boxes,
+.package-boxes {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
 }
 
-.service-box, .package-box {
-    background: #f4f4f4;
-    padding: 20px;
+.service-box,
+.package-box {
+    flex: 1 1 calc(33.333% - 20px);
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
     border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center;
-    flex: 1 1 30%;
 }
 
-.service-box img, .package-box img {
-    width: 100%;
+.service-box img {
+    max-width: 100%;
     height: auto;
     border-radius: 8px;
+    margin-bottom: 15px;
 }
 
-/* Contact Section */
-.contact-info {
-    margin-top: 20px;
-}
-
-.contact-info a {
-    color: #007bff;
-    text-decoration: none;
-}
-
-.contact-info a:hover {
-    text-decoration: underline;
-}
-
-/* Footer */
+/* Footer Styles */
 footer {
     background: #333;
     color: #fff;
-    padding: 20px;
-    text-align: center;
+    padding: 20px 0;
+    position: relative;
+}
+
+footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-left a {
+    color: #fff;
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+.footer-right {
+    display: flex;
+    align-items: center;
+}
+
+.footer-logo {
+    width: 50px;
+    height: auto;
+    margin-right: 10px;
+}
+
+/* Adjustments for responsiveness */
+@media (max-width: 768px) {
+    .service-box,
+    .package-box {
+        flex: 1 1 100%;
+    }
 }

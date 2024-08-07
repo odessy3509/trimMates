@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -93,21 +94,48 @@
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer id="footer">
-        <div class="container">
-            <div class="footer-left">
-                <p>Contact Us: (555) 123-4567 | email@example.com</p>
+<!-- Footer -->
+<footer id="footer">
+    <div class="container">
+        <!-- First Row -->
+        <div class="footer-row footer-row-1">
+            <div class="footer-col footer-col-1">
                 <p>
-                    <a href="https://facebook.com" target="_blank">Facebook</a> |
-                    <a href="https://instagram.com" target="_blank">Instagram</a>
+                    <span>(555) 123-4567</span>
+                    <span>email@example.com</span>
                 </p>
+                <div class="social-links">
+                    <a href="https://facebook.com" target="_blank">Facebook</a>
+                    <a href="https://instagram.com" target="_blank">Instagram</a>
+                    <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+                </div>
             </div>
-            <div class="footer-right">
-                <p>&copy; 2024 Trim Mates | <img src="logo.png" alt="Trim Mates Logo"></p>
+            <div class="footer-col footer-col-2">
+                <!-- Placeholder for additional links -->
+            </div>
+            <div class="footer-col footer-col-3">
+                <img src="logo.png" alt="Trim Mates Logo" class="footer-logo">
             </div>
         </div>
-    </footer>
+
+        <!-- Second Row -->
+        <div class="footer-row footer-row-2">
+            <div class="footer-nav">
+                <a href="#about" class="nav-link">About</a>
+                <a href="#services" class="nav-link">Services</a>
+                <a href="#packages" class="nav-link">Packages</a>
+                <a href="#scheduling" class="nav-link">Scheduling</a>
+                <a href="#footer" class="nav-link">Contact</a>
+            </div>
+        </div>
+
+        <!-- Third Row -->
+        <div class="footer-row footer-row-3">
+            <p>&copy; 2024 Trim Mates</p>
+        </div>
+    </div>
+</footer>
+
 
    <!-- Booking Modal -->
 <div id="bookingModal" class="modal">
@@ -173,33 +201,3 @@
 
 
 
-// JavaScript for handling the modal
-document.addEventListener('DOMContentLoaded', function() {
-    var modal = document.getElementById("bookingModal");
-    var btn = document.getElementById("bookNowBtn");
-    var span = document.getElementsByClassName("close")[0];
-    var serviceSelect = document.getElementById("service");
-    var customServiceInput = document.getElementById("customService");
-
-    btn.onclick = function() {
-        modal.style.display = "block";
-    }
-
-    span.onclick = function() {
-        modal.style.display = "none";
-    }
-
-    window.onclick = function(event) {
-        if (event.target == modal) {
-            modal.style.display = "none";
-        }
-    }
-
-    serviceSelect.addEventListener('change', function() {
-        if (this.value === "custom") {
-            customServiceInput.style.display = "block";
-        } else {
-            customServiceInput.style.display = "none";
-        }
-    });
-});

@@ -9,14 +9,15 @@
 <body>
     <!-- Header -->
     <header>
-        <div class="header-container">
-            <img src="logo.png" alt="Trim Mates Logo" class="logo">
+        <div class="container">
+            <h1>Trim Mates</h1>
             <nav>
                 <ul>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#packages">Packages</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#services" class="nav-link">Services</a></li>
+                    <li><a href="#packages" class="nav-link">Packages</a></li>
+                    <li><a href="#scheduling" class="nav-link">Scheduling</a></li>
+                    <li><a href="#footer" class="nav-link">Contact</a></li>
                 </ul>
             </nav>
         </div>
@@ -24,10 +25,10 @@
 
     <!-- Hero Section -->
     <section id="hero">
-        <div class="hero-container">
-            <h1>Welcome to Trim Mates</h1>
-            <p>Your trusted partner for professional landscaping services.</p>
-            <a href="#contact" class="cta-button">Get in Touch</a>
+        <div class="hero-content">
+            <h2>Transform Your Landscape</h2>
+            <p>Professional landscaping services to enhance your outdoor spaces.</p>
+            <a href="#scheduling" class="cta-button">Book Now</a>
         </div>
     </section>
 
@@ -35,7 +36,7 @@
     <section id="about">
         <div class="container">
             <h2>About Us</h2>
-            <p>We provide top-notch landscaping services to enhance the beauty of your outdoor spaces.</p>
+            <p>Description.....</p>
         </div>
     </section>
 
@@ -43,14 +44,8 @@
     <section id="services">
         <div class="container">
             <h2>Our Services</h2>
-            <div class="service-grid">
-                <!-- Example Service Box -->
-                <div class="service-box">
-                    <img src="service1.jpg" alt="Service 1">
-                    <h3>Service 1</h3>
-                    <p>Detail about Service 1.</p>
-                </div>
-                <!-- Add more service boxes as needed -->
+            <div class="service-boxes">
+                <!-- Service boxes here -->
             </div>
         </div>
     </section>
@@ -59,50 +54,39 @@
     <section id="packages">
         <div class="container">
             <h2>Our Packages</h2>
-            <div class="package-grid">
-                <!-- Example Package Box -->
-                <div class="package-box">
-                    <h3>Package 1</h3>
-                    <p>Detail about Package 1.</p>
-                </div>
-                <!-- Add more package boxes as needed -->
+            <div class="package-boxes">
+                <!-- Package boxes here -->
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact">
+    <!-- Scheduling Section -->
+    <section id="scheduling">
         <div class="container">
-            <h2>Contact Us</h2>
-            <form id="contactForm">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-                
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-                
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" required></textarea>
-                
-                <button type="submit">Send Message</button>
-            </form>
-            <div class="contact-info">
-                <p>Phone: (555) 123-4567</p>
-                <p>Email: email@example.com</p>
+            <h2>Schedule a Service</h2>
+            <p>Scheduling.....</p>
+            <button id="bookNowBtn">Book Now</button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="container">
+            <div class="footer-left">
+                <p>Contact Us: (555) 123-4567 | email@example.com</p>
                 <p>
                     <a href="https://facebook.com" target="_blank">Facebook</a> |
                     <a href="https://instagram.com" target="_blank">Instagram</a>
                 </p>
             </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <p>&copy; 2024 Trim Mates | All Rights Reserved</p>
+            <div class="footer-right">
+                <p>&copy; 2024 Trim Mates | <img src="logo.png" alt="Trim Mates Logo"></p>
+            </div>
         </div>
     </footer>
+
+   <!-- Booking Modal -->
+   <!-- Booking modal code here -->
 
     <script src="scripts.js"></script>
 </body>
